@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&family=Raleway:wght@100&family=Roboto:wght@100&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-repeat: no-repeat;
@@ -10,38 +10,46 @@ body {
   background-color: #FA8BFF;
   background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
   
-  
-	font-family: 'Oswald', sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-.thought-box{
-  background-color: #ecc6ee;
-  border: 2px solid purple; 
-  margin:auto; width: 250px; 
-  margin-bottom: 20px; 
-  padding:20px; 
-  box-shadow: 10px 5px 5px purple;}
 .message-box{
   background-color: #ecc6ee;
-  height: 30vh; 
+  height: auto; 
   display:flex; 
   flex-direction: column; 
   align-items:center; 
   justify-content:space-around; 
-  width: 500px; margin:auto; 
+  width: 300px;
+  margin:auto; 
   margin-bottom:40px;
   margin-top:20px; 
   text-align:center;
-  border: 2px solid purple;
-  box-shadow: 10px 5px 5px purple;}
+   
+  box-shadow: 10px 5px 5px purple;
+     
+}
+
+
+.thought-box{
+  background-color: #ecc6ee;
+
+  width: 260px;
+  margin:auto;  
+  margin-bottom: 20px; 
+  padding:20px; 
+  box-shadow: 10px 5px 5px purple;
+  font-size:16px;
+  font-weight: 700;
+}
+
+.thought-text{font-weight: 900; font-size:18px}
+
 
 button {
-  padding: 1.3em 3em;
-  font-size: 12px;
+  font-family: 'Bebas Neue', cursive;
+  margin-top:15px;
+  margin-bottom: 15px;;
+  padding: 0.8em 1.5em;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
@@ -68,12 +76,12 @@ button {
 
  label,
 textarea {
-    font-size: .8rem;
+    font-size: 1rem;
     letter-spacing: 1px;
 }
 textarea {
     padding: 10px;
-    max-width: 100%;
+    width:240px;
     line-height: 1.5;
     border-radius: 5px;
     border: 1px solid rgb(235, 190, 241);
@@ -83,5 +91,19 @@ textarea {
 label {
     display: block;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 .emoji:hover{cursor: pointer;}
+.likes{display:flex; flex-direction: row; align-items:center; justify-content: space-between;}
+
+@media only screen and (min-width: 1100px)
+
+{
+  .message-box{width:500px;}
+  .thought-box{width:460px}
+
+
+
+
+
+}

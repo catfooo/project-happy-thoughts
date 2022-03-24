@@ -14,7 +14,7 @@ export const App = () => {
   const fetchMessages=()=>{  setLoading(true)
    fetch("https://happy-thoughts-technigo.herokuapp.com/thoughts")
    .then(res=>res.json())
-   .then(json=>(console.log(json), setThoughts(json))
+   .then(json=>(setThoughts(json))
    )
     
   }
@@ -40,7 +40,7 @@ const onFormSubmit=(event)=>{event.preventDefault()
 
 
    const handleLikesIncrease = (thoughtId) => {
-     console.log("hej", thoughtId)
+     
     const options = {
       method: 'POST',
     }
