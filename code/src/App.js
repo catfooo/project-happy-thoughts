@@ -4,27 +4,25 @@ import { ThoughtForm } from 'components/ThoughtForm'
 import { ThoughtList } from 'components/ThoughtList'
 export const App = () => {
 
-  const[thoughts, setThoughts]=useState([])
-  const [loading, setLoading]=useState(false)
-  const[newMessage, setNewMessage]=useState('')
+const[thoughts, setThoughts]=useState([])
+const[newMessage, setNewMessage]=useState('')
   
   
-  const onNewMessageChange=(event)=>{setNewMessage(event.target.value)}
-  
-  const fetchMessages=()=>{  setLoading(true)
+const onNewMessageChange=(event)=>{setNewMessage(event.target.value)}
+
+const fetchMessages=()=>{  
    fetch("https://happy-thoughts-technigo.herokuapp.com/thoughts")
    .then(res=>res.json())
    .then(json=>(setThoughts(json))
    )
-    
   }
-
-
 
 useEffect(()=>{ fetchMessages()},[])
 
 const onFormSubmit=(event)=>{event.preventDefault()
-  const options=  {
+
+
+const options=  {
     method:'POST',
     headers:{'Content-Type':'application/json'
       },
@@ -39,27 +37,22 @@ const onFormSubmit=(event)=>{event.preventDefault()
    }
 
 
-   const handleLikesIncrease = (thoughtId) => {
+const handleLikesIncrease = (thoughtId) => {
      
-    const options = {
-      method: 'POST',
+const options = {
+  method: 'POST',
     }
-
-    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${thoughtId}/like`, options)
-      .then(res => res.json())
-      .then(data => {
-        
-        fetchMessages(data)      
+     fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${thoughtId}/like`, options)
+    .then(res => res.json())
+    .then(data => {
+     fetchMessages(data)      
       })
   }
-   
-  
-   
 
   return (
     <div>
       <ThoughtForm newMessage={newMessage} onNewMessageChange={onNewMessageChange} onFormSubmit={onFormSubmit}/>
-      <ThoughtList loading={loading} thoughts={thoughts} onLikesIncrease={handleLikesIncrease} />
+      <ThoughtList thoughts={thoughts} onLikesIncrease={handleLikesIncrease} />
     </div>
   )
 }
