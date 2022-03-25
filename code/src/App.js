@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 
 import { ThoughtForm } from 'components/ThoughtForm'
 import { ThoughtList } from 'components/ThoughtList'
+
+
 export const App = () => {
 
 const[thoughts, setThoughts]=useState([])
