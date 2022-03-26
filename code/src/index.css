@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&family=Raleway:wght@100&family=Roboto:wght@100&display=swap');
 
+
+*{overflow-wrap: break-word;}
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -36,6 +38,7 @@ body {
   box-shadow: 10px 5px 5px purple;
   font-size:16px;
   font-weight: 700;
+  max-width:260px;
 }
 
 .thought-text{
@@ -84,6 +87,7 @@ textarea {
     border-radius: 5px;
     border: 1px solid rgb(235, 190, 241);
     box-shadow: 1px 1px 1px #999;
+   
 }
 
 label {
@@ -133,7 +137,13 @@ label {
   }
   
   .thought-box{
-    width:460px
+    width:460px;
+    max-width: 460px;
+
+  }
+  .thought-text{
+    max-width: 460px;
+    
   }
   
  
