@@ -12,8 +12,8 @@ return(
      <div className="likes">
      <div className="heartandlikes">
      <button className={(thought.hearts === 0 ? "like-button" : "red-likebutton")} onClick={() => onLikesIncrease(thought._id)}> 
-       <span className="emoji" role="img" aria-label="heart">❤️ </span> </button> 
-       <p>   x {thought.hearts}</p>
+       <span className="emoji" role="img" aria-label="heart">❤️</span></button> 
+       <p> x {thought.hearts}</p>
       </div> 
        <p className="date-text">
         {formatDistance(new Date(thought.createdAt), Date.now(), {addSuffix: true})}

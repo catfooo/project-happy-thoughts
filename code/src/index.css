@@ -2,6 +2,7 @@
 
 
 *{overflow-wrap: break-word;}
+
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -63,6 +64,15 @@ body {
   cursor: pointer;
   outline: none;
  }
+
+ .button:disabled,
+.button[disabled],
+.button:disabled:hover{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  transform: none;
+}
  
  .button:hover {
   background-color: #609af1;
